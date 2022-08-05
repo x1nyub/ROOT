@@ -43,35 +43,22 @@
             <section class="py-5">
                 <div class="container px-5">
                     <!-- Contact form-->
-                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
-                        <div class="text-center mb-5">
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                         <div class="text-center">
+                            <img src="assets/needlogin.png"width="450" height="180">
+                        </div>
                             
-                            <h1 class="fw-bolder">로그인</h1>
-                            <p class="lead fw-normal text-muted ">아이디와 비밀번호를 확인하세요 !</p>
                             
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
                              <!--여기밑에 FORM만 건드림-->
-                                <form action="login_ok.jsp" method="post">
-                                    
-                                    
-                            
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" name="id" type="text"   />
-                                        <label for="name">ID</label>
-                                        
-                                    </div>
-                                    
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control"  name="passwd" type="password"   />
-                                        <label for="name">Password</label>
-                                        
-                                    <p></p>
-                                   
-                                                                                       
-                                    <div class="d-grid"><button class=" btn-primary btn-lg disabled"  type="submit">로그인</button></div>
-                                </form>
+                               
                             </div>
                         </div>
                     </div>

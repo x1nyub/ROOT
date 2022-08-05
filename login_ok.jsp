@@ -39,7 +39,7 @@
                         session.setAttribute("idok", id);
                         session.setAttribute("nameok", name);
 
-                        response.sendRedirect("../index.jsp");
+                        response.sendRedirect("index.jsp");
 
                 } else{
                         response.sendRedirect("login_fail.jsp");

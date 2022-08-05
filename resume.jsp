@@ -2,7 +2,7 @@
 <%  
 String idok = (String) session.getAttribute("idok");
 if (idok==null) {
-    response.sendRedirect("logout.jsp");
+    response.sendRedirect("login_need.jsp");
 }
 %>
 <!DOCTYPE html>
