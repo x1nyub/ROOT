@@ -46,42 +46,17 @@
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
                             
-                            <h1 class="fw-bolder">회원가입</h1>
-                            <p class="lead fw-normal text-muted mb-0">간편한 가입으로 다양한 서비스를 편리하게 이용해보세요.</p>
-                            <span style="color:red">중복된 ID 입니다.</span>
+                            <h1 class="fw-bolder">공고 등록이 완료되었습니다.</h1>
+                            
+                            <p></p>
+                            <a class="text-decoration-none" href="company.jsp">
+                                채용 공고 확인하기
+                                 <i class="bi bi-arrow-right"></i>
+                             </a>
                         </div>
-                        <div class="row gx-5 justify-content-center">
-                            <div class="col-lg-8 col-xl-6">
-                             <!--여기밑에 FORM만 건드림-->
-                                <form action="join_ok.jsp" method="post">
-                                
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" name="id" type="text"   />
-                                        <label for="name">ID</label>
-                                        
-                                    </div>
-                                    
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control"  name="passwd" type="password"   />
-                                        <label for="name">Password</label>
-                                        
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control"  name="name" type="text"   />
-                                        <label for="name">Name</label>
-                                       
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control"  name="email" type="text"   />
-                                        <label for="name">Email</label>
-                                       
-                                    </div>
-                                   
-                                                                                       
-                                    <div class="d-grid"><button class=" btn-primary btn-lg disabled"  type="submit">완료</button></div>
-                                </form>
-                            </div>
-                        </div>
+                       
+                        
+                        
                     </div>
                     <!-- Contact cards-->
                     

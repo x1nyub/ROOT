@@ -34,7 +34,7 @@ if(result == 1){
                         }
 
 catch(Exception e){
-//window.open("join_fail.jsp","_blank","width=300px height=100px");
+
         response.sendRedirect("join_fail.jsp");
 }
 
