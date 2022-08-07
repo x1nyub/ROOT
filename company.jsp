@@ -106,7 +106,7 @@
                                                             </li>
                                                         </ul>
                                                         <div class="d-grid"><a class="btn btn-outline-primary"
-                                                                href="#!">채용공고 확인하기</a></div>
+                                                                href="company_next.jsp">채용공고 확인하기</a></div>
                                                     </div>
                                                 </div>
                                             </div>

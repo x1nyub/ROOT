@@ -43,20 +43,24 @@
             <section class="py-5">
                 <div class="container px-5">
                     <!-- Contact form-->
-                    <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
-                        <div class="text-center mb-5">
-                            
-                            <h1 class="fw-bolder">공고 등록에 실패하였습니다.</h1>
-                            
-                            <p></p>
-                            <a class="text-decoration-none" href="enroll.jsp">
-                                다시 등록하기
-                                 <i class="bi bi-arrow-right"></i>
-                             </a>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                         <div class="text-center">
+                            <img url="https://daoift3qrrnil.cloudfront.net/content_images/images/000/128/856/original/%EA%B3%B5%EA%B3%A0.jpg?1659407698">
                         </div>
-                       
-                        
-                        
+                            
+                            
+                        </div>
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 col-xl-6">
+                             <!--여기밑에 FORM만 건드림-->
+                               
+                            </div>
+                        </div>
                     </div>
                     <!-- Contact cards-->
                     
