@@ -1,4 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*" %>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,26 +45,115 @@
             <!-- Page content-->
             <section class="py-5">
                 <div class="container px-5">
-                    <!-- Contact form-->
-               
-                        <h1>
-                            <%=session.getAttribute("numok")
-                            %> 
-                            </h1>            
+                    <!--전달받은 num값 확인-->           
+               <%
+               int num=Integer.parseInt(request.getParameter("num"));               
+                     Class.forName("com.mysql.jdbc.Driver");
+                     String url = "jdbc:mysql://43.200.111.30:3306/db";
+                     Connection conn = DriverManager.getConnection(url, "root", "It1");
+                     PreparedStatement ps=(PreparedStatement)conn.prepareStatement("SELECT * from company where company_num= (?) ");
+                     ps.setInt(1, num);
+                     ResultSet rs=ps.executeQuery();
+                     while(rs.next()){
+                             String company_subject=rs.getString("company_subject");
+                        
+                             pageContext.setAttribute("company_subject", company_subject);
+                             String company_name=rs.getString("company_name");
+                             
+                             pageContext.setAttribute("company_name", company_name);
+                             String company_scale=rs.getString("company_scale");
+                             
+                             pageContext.setAttribute("company_scale", company_scale);
+                             String company_career=rs.getString("company_career");
+                             
+                             pageContext.setAttribute("company_career", company_career);
+                             String company_education=rs.getString("company_education");
+                             
+                             pageContext.setAttribute("company_education", company_education);
+                             String company_location=rs.getString("company_location");
+                            
+                             pageContext.setAttribute("company_location", company_location);
+                             String company_fulltime=rs.getString("company_fulltime");
+                           
+                             pageContext.setAttribute("company_fulltime", company_fulltime);
+                             String company_field=rs.getString("company_field");
+                           
+                             pageContext.setAttribute("company_field", company_field);
+                             String company_image=rs.getString("company_image");
+                           
+                             pageContext.setAttribute("company_image", company_image);
+                             String company_url=rs.getString("company_url");
+                         
+                             pageContext.setAttribute("company_url", company_url);
+                             String company_period=rs.getString("company_period");
+                             
+                             pageContext.setAttribute("company_period", company_period);                          
+                     }               
+                 %>          
+                   <!-- 표에 데이터 집어넣기 -->
+                     <div class="row justify-content-center">
+                        <div class="col-sm-7">
+                        
+                        <table class="table table-bordered table-hover   ">
+                            
+                            <tbody>
+                              <tr>
+                                
+                                 <td colspan="2">
+                                    <span class="fw-bold">${company_subject}</span>
+                                </td>
+                                
+                                 
+                              </tr>
+                              <tr>
+                                 <td>기업명 : ${company_name}</td>
+                                 <td>기업규모 : ${company_scale}</td>
+                                
+                              </tr>
+                              <tr>
+                                 <td>신입/경력 : ${company_career}</td>
+                                 <td>학력 : ${company_education}</td>
+                                
+                              </tr>
+                              <tr>
+                                <td>기업 위치 : ${company_location}</td>
+                                <td>채용 형태 : ${company_fulltime}</td>
+                               
+                             </tr>
+                             <tr>
+                                <td>채용 분야 : ${company_field}</td>
+                                <td>채용 기간 : ${company_period}</td>
+                               
+                             </tr>
+                            </tbody> 
+                           
+                           </table>
+                    </div>
+                </div>
+                <!-- 홈페이지 지원 버튼 / 자소서 작성 이동 버튼 -->
+                
+                <div class="d-grid col-3 float:left">
+                    <div  style="display: inline-block">
+                    <a class="btn btn-outline-primary"
+                    onclick="window.open('${company_url}')">홈페이지 지원</a>
+                    <a class="btn btn-outline-primary"
+                    onclick="location.href='resume.jsp'">자소서 작성</a>
+                </div>
+                </div>  
+
+                <!-- 채용 이미지 불러오기 -->
                          <div class="text-center">
-                            <img src="https://daoift3qrrnil.cloudfront.net/content_images/images/000/128/856/original/%EA%B3%B5%EA%B3%A0.jpg?1659407698">
+                            <img src="${company_image}">
                         </div>
                             
                             
                         </div>
                         <div class="row gx-5 justify-content-center">
-                            <div class="col-lg-8 col-xl-6">
-                             <!--여기밑에 FORM만 건드림-->
-                               
+                            <div class="col-lg-8 col-xl-6">                                              
                             </div>
                         </div>
                     </div>
-                    <!-- Contact cards-->
+                   
                     
                 </div>
             </section>
