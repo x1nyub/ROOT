@@ -105,8 +105,18 @@
                                                                 <%=rs.getString("company_fulltime")%>
                                                             </li>
                                                         </ul>
+                                                        <%                                                            
+                                                            int num = rs.getInt("company_num");
+                                                            session.setAttribute("numok", num);
+                                                             %>
                                                         <div class="d-grid"><a class="btn btn-outline-primary"
-                                                                href="company_next.jsp">채용공고 확인하기</a></div>
+                                                            id="${numok}"
+                                                            href="company_next.jsp">채용공고 확인하기</a></div>
+                                                            
+                                                                <%=num%>
+                                                                <div>${numok}</div>
+                                                                
+                                                    
                                                     </div>
                                                 </div>
                                             </div>

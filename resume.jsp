@@ -9,7 +9,10 @@ if (idok==null) {
 
 <body>
     
-        
+    <h1>
+    <%=session.getAttribute("idok")
+    %> 
+    </h1>
     <h2>resume test</h2>
     
 

@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -43,14 +44,13 @@
             <section class="py-5">
                 <div class="container px-5">
                     <!-- Contact form-->
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
+               
+                        <h1>
+                            <%=session.getAttribute("numok")
+                            %> 
+                            </h1>            
                          <div class="text-center">
-                            <img url="https://daoift3qrrnil.cloudfront.net/content_images/images/000/128/856/original/%EA%B3%B5%EA%B3%A0.jpg?1659407698">
+                            <img src="https://daoift3qrrnil.cloudfront.net/content_images/images/000/128/856/original/%EA%B3%B5%EA%B3%A0.jpg?1659407698">
                         </div>
                             
                             
