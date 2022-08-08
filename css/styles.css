@@ -391,7 +391,7 @@ button:not(:disabled),
 }
 
 textarea {
-  resize: vertical;
+  resize: none;
 }
 
 fieldset {
@@ -611,7 +611,7 @@ progress {
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 10%;
   height: auto;
 }
 
@@ -2726,6 +2726,10 @@ textarea.form-control-lg {
   padding-top: 1.625rem;
   padding-bottom: 0.625rem;
 }
+.scale-down {
+  object-fit: scale-down;
+}
+
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
@@ -5027,7 +5031,7 @@ textarea.form-control-lg {
   }
 }
 .progress {
-  display: flex;
+  display: flex; center;
   height: 1rem;
   overflow: hidden;
   font-size: 0.75rem;
