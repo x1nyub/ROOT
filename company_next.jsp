@@ -129,16 +129,17 @@
                 </div>
                 <!-- 홈페이지 지원 버튼 / 자소서 작성 이동 버튼 -->
                 
-                <div class="d-grid col-3">
+                <div style = "text-align:center">
                     <div  style="display: inline-block">
                     <a class="btn btn-outline-primary"
-                    onclick="window.open('${company_url}')">홈페이지 지원</a>
+                    onclick="window.open('${company_url}')">홈페이지 지원</a>&nbsp&nbsp&nbsp
                     <a class="btn btn-outline-primary"
                     onclick="location.href='resume.jsp'">자소서 작성</a>
                 </div>
-                </div>  
+                </div>   
 
                 <!-- 채용 이미지 불러오기 -->
+                    <br></br>
                          <div class="text-center">
                             <img src="${company_image}">
                         </div>
