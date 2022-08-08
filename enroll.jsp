@@ -72,21 +72,21 @@ if (idok==null) {
                                         
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-check-input"  name="company_scale" type="radio" value="small" checked/> 중소기업
-                                        <input class="form-check-input"  name="company_scale" type="radio" value="medium" /> 중견기업
-                                        <input class="form-check-input"  name="company_scale" type="radio" value="large" /> 대기업
+                                        <input class="form-check-input"  name="company_scale" type="radio" value="중소기업" checked/> 중소기업
+                                        <input class="form-check-input"  name="company_scale" type="radio" value="중견기업" /> 중견기업
+                                        <input class="form-check-input"  name="company_scale" type="radio" value="대기업" /> 대기업
                                     </div>
 
                                     <div class="form-floating mb-3">
-                                        <input class="form-check-input"  name="company_career" type="radio" value="new" checked/> 신입
-                                        <input class="form-check-input"  name="company_career" type="radio" value="old" /> 경력
+                                        <input class="form-check-input"  name="company_career" type="radio" value="신입" checked/> 신입
+                                        <input class="form-check-input"  name="company_career" type="radio" value="경력" /> 경력
                                        
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-check-input"  name="company_education" type="radio" value="1" checked/> 학력무관
-                                        <input class="form-check-input"  name="company_education" type="radio" value="2" /> 고졸
-                                        <input class="form-check-input"  name="company_education" type="radio" value="3" /> 초대졸
-                                        <input class="form-check-input"  name="company_education" type="radio" value="4" /> 대졸
+                                        <input class="form-check-input"  name="company_education" type="radio" value="학력무관" checked/> 학력무관
+                                        <input class="form-check-input"  name="company_education" type="radio" value="고졸↑" /> 고졸
+                                        <input class="form-check-input"  name="company_education" type="radio" value="초대졸↑" /> 초대졸
+                                        <input class="form-check-input"  name="company_education" type="radio" value="대졸↑" /> 대졸
                                        
                                     </div>
                                     <div class="form-floating mb-3">
@@ -95,18 +95,18 @@ if (idok==null) {
                                        
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="1" checked/> 정규직
-                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="2" /> 계약직
-                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="3" /> 인턴
+                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="정규직" checked/> 정규직
+                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="계약직" /> 계약직
+                                        <input class="form-check-input"  name="company_fulltime" type="radio" value="인턴" /> 인턴
                                        
                                     </div>
                                     <div class="form-floating mb-3">
                                         <input class="form-check-input"  name="company_field" type="radio" value="it" checked /> IT
-                                        <input class="form-check-input"  name="company_field" type="radio" value="management"/> 경영
-                                        <input class="form-check-input"  name="company_field" type="radio" value="marketing"/> 마케팅
-                                        <input class="form-check-input"  name="company_field" type="radio" value="sales" /> 영업
-                                        <input class="form-check-input"  name="company_field" type="radio" value="design"/> 디자인
-                                        <input class="form-check-input"  name="company_field" type="radio" value="rd" /> 연구개발
+                                        <input class="form-check-input"  name="company_field" type="radio" value="경영"/> 경영
+                                        <input class="form-check-input"  name="company_field" type="radio" value="마케팅"/> 마케팅
+                                        <input class="form-check-input"  name="company_field" type="radio" value="영업" /> 영업
+                                        <input class="form-check-input"  name="company_field" type="radio" value="디자인"/> 디자인
+                                        <input class="form-check-input"  name="company_field" type="radio" value="연구개발" /> 연구개발
                                        
                                     </div>
                                     <div class="form-floating mb-3">

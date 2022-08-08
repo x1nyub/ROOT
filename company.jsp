@@ -76,9 +76,11 @@
                                                 <div class="card mb-5 mb-xl-0">
                                                     <div class="card-body p-5">
                                                         <div class="mb-3">
-                                                            <span class="display-6  fw-bold">
+                                                            <span style="font-size : 20pt">
+                                                            <span class="fw-bold">
                                                                 <%=rs.getString("company_subject")%>
                                                             </span>
+                                                        </span>
 
                                                         </div>
                                                         <ul class="list-unstyled mb-4">
