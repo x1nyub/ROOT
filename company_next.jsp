@@ -129,7 +129,7 @@
                 </div>
                 <!-- 홈페이지 지원 버튼 / 자소서 작성 이동 버튼 -->
                 
-                <div class="d-grid col-3 float:left">
+                <div class="d-grid col-3">
                     <div  style="display: inline-block">
                     <a class="btn btn-outline-primary"
                     onclick="window.open('${company_url}')">홈페이지 지원</a>

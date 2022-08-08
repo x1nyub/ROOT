@@ -111,9 +111,7 @@
                                                              %>
                                                         <div class="d-grid"><a class="btn btn-outline-primary"
                                                             id="${numok}" onclick="location.href='company_next.jsp?num=<%=num%>'">
-                                                            채용공고 확인하기</a></div>                                                
-                                                                
-                                                                                                           
+                                                            채용공고 확인하기</a></div>                                                                                                                                                                                                                        
                                                     </div>
                                                 </div>
                                             </div>
