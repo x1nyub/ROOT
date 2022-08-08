@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 
 <%
-
+<%String idok = (String) session.getAttribute("idok");%>
 request.setCharacterEncoding("UTF-8");
 
 String company_subject = request.getParameter("company_subject");

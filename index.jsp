@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%String idok = (String) session.getAttribute("idok");%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,11 +30,11 @@
                             <li class="nav-item"><a class="nav-link" href="resume.jsp">자기소개서</a></li>
                             <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">로그인</a>
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                    <li><a class="dropdown-item" href="login.jsp">로그인</a></li>
-                                    <li><a class="dropdown-item" href="logout.jsp">로그아웃</a></li>
-                                    <li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
+                                    <%if (idok==null)%><li><a class="dropdown-item" href="login.jsp">로그인</a></li>
+                                    <%if (idok!=null)%><li><a class="dropdown-item" href="logout.jsp">로그아웃</a></li>
+                                    <%if (idok==null)%><li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
                                 </ul>
                             </li>
                         </ul>

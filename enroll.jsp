@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%  
+String adminok = (String) session.getAttribute("adminok");
 String idok = (String) session.getAttribute("idok");
 if (idok==null) {
+    response.sendRedirect("login_need.jsp");
+}
+else if (session.getAttribute("adminok").equals("1")) {
     response.sendRedirect("login_need.jsp");
 }
 %>
@@ -34,11 +38,11 @@ if (idok==null) {
                             <li class="nav-item"><a class="nav-link" href="resume.jsp">자기소개서</a></li>
                             <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">로그인</a>
+                                <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                                    <li><a class="dropdown-item" href="login.jsp">로그인</a></li>
-                                    <li><a class="dropdown-item" href="logout.jsp">로그아웃</a></li>
-                                    <li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
+                                    <%if (idok==null)%><li><a class="dropdown-item" href="login.jsp">로그인</a></li>
+                                    <%if (idok!=null)%><li><a class="dropdown-item" href="logout.jsp">로그아웃</a></li>
+                                    <%if (idok==null)%><li><a class="dropdown-item" href="join.jsp">회원가입</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -52,7 +56,7 @@ if (idok==null) {
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
                             
-                            <h1 class="fw-bolder">공고 등록</h1>
+                            <h1 class="fw-bolder">공고 등록 </h1>
                             <p class="lead fw-normal text-muted mb-0">관리자만 접근 가능한 페이지입니다.</p>
                         </div>
                         <div class="row gx-5 justify-content-center">

@@ -1,15 +1,15 @@
 <%@ page import = "java.sql.*" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%String idok = (String) session.getAttribute("idok");%>
 <%
         request.setCharacterEncoding("UTF-8");
 
         String id = request.getParameter("id");
         String passwd = request.getParameter("passwd");
+        String isadmin = request.getParameter("isadmin");
 
         String url = "jdbc:mysql://43.200.111.30:3306/db";
-        String uid = "JSP";
-        String upw = "JSP";
 
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -35,9 +35,10 @@
                 if(rs.next()){
                         id = rs.getString("id");
                         String name = rs.getString("name");
+                        isadmin=rs.getString("isadmin");
 
                         session.setAttribute("idok", id);
-                        session.setAttribute("nameok", name);
+                        session.setAttribute("adminok", isadmin);
 
                         response.sendRedirect("index.jsp");
 
