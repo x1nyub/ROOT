@@ -55,38 +55,37 @@
                      ps.setInt(1, num);
                      ResultSet rs=ps.executeQuery();
                      while(rs.next()){
-                             String company_subject=rs.getString("company_subject");
-                        
+                             String company_subject=rs.getString("company_subject");                      
                              pageContext.setAttribute("company_subject", company_subject);
-                             String company_name=rs.getString("company_name");
-                             
+
+                             String company_name=rs.getString("company_name");                             
                              pageContext.setAttribute("company_name", company_name);
-                             String company_scale=rs.getString("company_scale");
-                             
+
+                             String company_scale=rs.getString("company_scale"); 
                              pageContext.setAttribute("company_scale", company_scale);
-                             String company_career=rs.getString("company_career");
-                             
+
+                             String company_career=rs.getString("company_career");                            
                              pageContext.setAttribute("company_career", company_career);
-                             String company_education=rs.getString("company_education");
-                             
+
+                             String company_education=rs.getString("company_education");                          
                              pageContext.setAttribute("company_education", company_education);
-                             String company_location=rs.getString("company_location");
-                            
+
+                             String company_location=rs.getString("company_location");                         
                              pageContext.setAttribute("company_location", company_location);
-                             String company_fulltime=rs.getString("company_fulltime");
-                           
+
+                             String company_fulltime=rs.getString("company_fulltime");                       
                              pageContext.setAttribute("company_fulltime", company_fulltime);
-                             String company_field=rs.getString("company_field");
-                           
+
+                             String company_field=rs.getString("company_field");                       
                              pageContext.setAttribute("company_field", company_field);
-                             String company_image=rs.getString("company_image");
-                           
+
+                             String company_image=rs.getString("company_image");                    
                              pageContext.setAttribute("company_image", company_image);
-                             String company_url=rs.getString("company_url");
-                         
+
+                             String company_url=rs.getString("company_url");                
                              pageContext.setAttribute("company_url", company_url);
-                             String company_period=rs.getString("company_period");
-                             
+
+                             String company_period=rs.getString("company_period");                                 
                              pageContext.setAttribute("company_period", company_period);                          
                      }               
                  %>          
@@ -94,37 +93,35 @@
                      <div class="row justify-content-center">
                         <div class="col-sm-7">
                         
-                        <table class="table table-bordered table-hover   ">
+                        <table class="table table-bordered table-hover">
                             
                             <tbody>
-                              <tr>
-                                
+                              <tr>                              
                                  <td colspan="2">
                                     <span class="fw-bold">${company_subject}</span>
-                                </td>
-                                
-                                 
+                                </td>                        
                               </tr>
+
                               <tr>
                                  <td>기업명 : ${company_name}</td>
-                                 <td>기업규모 : ${company_scale}</td>
-                                
+                                 <td>기업규모 : ${company_scale}</td>                              
                               </tr>
+
                               <tr>
                                  <td>신입/경력 : ${company_career}</td>
-                                 <td>학력 : ${company_education}</td>
-                                
+                                 <td>학력 : ${company_education}</td>                              
                               </tr>
+
                               <tr>
                                 <td>기업 위치 : ${company_location}</td>
-                                <td>채용 형태 : ${company_fulltime}</td>
-                               
+                                <td>채용 형태 : ${company_fulltime}</td>                               
                              </tr>
+
                              <tr>
                                 <td>채용 분야 : ${company_field}</td>
-                                <td>채용 기간 : ${company_period}</td>
-                               
+                                <td>채용 기간 : ${company_period}</td>                             
                              </tr>
+
                             </tbody> 
                            
                            </table>
