@@ -87,7 +87,28 @@
                              pageContext.setAttribute("company_url", company_url);
 
                              String company_period=rs.getString("company_period");                                 
-                             pageContext.setAttribute("company_period", company_period);                          
+                             pageContext.setAttribute("company_period", company_period);
+
+                             /* 아래는 세션 관리 부분 */
+
+                             String cpnameok = request.getParameter("company_name");
+                             cpnameok=rs.getString("company_name");
+                             session.setAttribute("cpnameok", company_name);
+
+                             String company_q1=rs.getString("company_q1");
+                             String cpq1ok = request.getParameter("company_q1");
+                             cpq1ok=rs.getString("company_q1");
+                             session.setAttribute("cpq1ok", company_q1);
+
+                             String company_q2=rs.getString("company_q2");
+                             String cpq2ok = request.getParameter("company_q2");
+                             cpq2ok=rs.getString("company_q2");
+                             session.setAttribute("cpq2ok", company_q2);
+
+                             String company_q3=rs.getString("company_q3");
+                             String cpq3ok = request.getParameter("company_q3");
+                             cpq3ok=rs.getString("company_q3");
+                             session.setAttribute("cpq3ok", company_q3);
                      }               
                  %>          
                    <!-- 표에 데이터 집어넣기 -->
@@ -129,13 +150,14 @@
                     </div>
                 </div>
                 <!-- 홈페이지 지원 버튼 / 자소서 작성 이동 버튼 -->
-                
+               
                 <div style = "text-align:center">
                     <div  style="display: inline-block">
                     <a class="btn btn-outline-primary"
                     onclick="window.open('${company_url}')">홈페이지 지원</a>&nbsp&nbsp&nbsp
                     <a class="btn btn-outline-primary"
-                    onclick="location.href='resume.jsp'">자소서 작성</a>
+                    onclick="location.href='resume.jsp'">자소서 작성
+                </a>
                 </div>
                 </div>   
 

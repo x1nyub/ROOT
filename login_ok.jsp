@@ -34,9 +34,8 @@
 
                 if(rs.next()){
                         id = rs.getString("id");
-                        String name = rs.getString("name");
                         isadmin=rs.getString("isadmin");
-
+                        
                         session.setAttribute("idok", id);
                         session.setAttribute("adminok", isadmin);
 

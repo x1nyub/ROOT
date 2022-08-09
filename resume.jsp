@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%String idok = (String) session.getAttribute("idok");%>
+<% String idok=(String) session.getAttribute("idok"); 
+    if (idok==null) {
+        response.sendRedirect("login_need.jsp"); } %>
+<%String cpnameok = (String) session.getAttribute("cpnameok");%>
+<%String cpq1ok = (String) session.getAttribute("cpq1ok");%>
+<%String cpq2ok = (String) session.getAttribute("cpq2ok");%>
+<%String cpq3ok = (String) session.getAttribute("cpq3ok");%>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -44,6 +51,7 @@
             <!-- Page content-->
             <section class="py-5">
                 <div class="container px-5">
+                           
                     <!-- Contact form-->
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">                            
@@ -53,25 +61,28 @@
                         <div class="row gx-5 justify-content-center">
                             <div class="col-xl-8">
                              <!--여기밑에 FORM만 건드림-->
-                             <h2 class="fw-bolder mb-3">기업이름 어쩌고저쩌고</h2>
+                             <h2 class="fw-bolder mb-3"><%=session.getAttribute("cpnameok")%></h2>
+                             
+                             
+                             
                              <form action="resume_ok.jsp" method="post">
                              <div class="accordion mb-5" id="accordionExample">
                                  <div class="accordion-item">
-                                     <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">문항 #1</button></h3>
+                                     <h3 class="accordion-header" id="headingOne"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">문항 #1  <%=session.getAttribute("cpq1ok")%></button></h3>
                                      <div class="accordion-collapse collapse show" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample"> 
-                                        <p><textarea cols="95" rows="17" style="border:none"></textarea></p>
+                                        <p><textarea cols="95" rows="17" style="border:none" name="company_a1"></textarea></p>
                                      </div>
                                  </div>
                                  <div class="accordion-item">
-                                     <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">문항 #2</button></h3>
+                                     <h3 class="accordion-header" id="headingTwo"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">문항 #2  <%=session.getAttribute("cpq2ok")%></button></h3>
                                      <div class="accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                        <p><textarea cols="95" rows="17" style="border:none"></textarea></p>
+                                        <p><textarea cols="95" rows="17" style="border:none" name="company_a2"></textarea></p>
                                      </div>
                                  </div>
                                  <div class="accordion-item">
-                                     <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">문항 #3</button></h3>
+                                     <h3 class="accordion-header" id="headingThree"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">문항 #3  <%=session.getAttribute("cpq3ok")%></button></h3>
                                      <div class="accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                        <p><textarea cols="95" rows="17" style="border:none"></textarea></p>
+                                        <p><textarea cols="95" rows="17" style="border:none" name="company_a3"></textarea></p>
                                      </div>
                                  </div>
                              </div>

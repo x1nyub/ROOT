@@ -139,6 +139,12 @@ else if (session.getAttribute("adminok").equals("1")) {
                                         <label for="name">자소서 문항 2</label>
                                        
                                     </div>
+
+                                    <div class="form-floating mb-3">
+                                        <input class="form-control"  name="company_q3" type="text"   />
+                                        <label for="name">자소서 문항 3</label>
+                                       
+                                    </div>
                                    
                                    
                                                                                        
