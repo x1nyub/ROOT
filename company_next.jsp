@@ -29,7 +29,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">메인 페이지</a></li>
                             <li class="nav-item"><a class="nav-link" href="company.jsp">채용 공고</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.jsp">자기소개서</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume_board.jsp">자기소개서</a></li>
                             <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
@@ -59,7 +59,10 @@
                              String company_subject=rs.getString("company_subject");                      
                              pageContext.setAttribute("company_subject", company_subject);
 
-                             String company_name=rs.getString("company_name");                             
+                             String company_name=rs.getString("company_name");
+                             String cpnameok = request.getParameter("company_name");
+                             cpnameok=rs.getString("company_name");
+                             session.setAttribute("cpnameok", company_name);                             
                              pageContext.setAttribute("company_name", company_name);
 
                              String company_scale=rs.getString("company_scale"); 
@@ -91,9 +94,7 @@
 
                              /* 아래는 세션 관리 부분 */
 
-                             String cpnameok = request.getParameter("company_name");
-                             cpnameok=rs.getString("company_name");
-                             session.setAttribute("cpnameok", company_name);
+                   
 
                              String company_q1=rs.getString("company_q1");
                              String cpq1ok = request.getParameter("company_q1");

@@ -34,7 +34,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">메인 페이지</a></li>
                             <li class="nav-item"><a class="nav-link" href="company.jsp">채용 공고</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.jsp">자기소개서</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume_board.jsp">자기소개서</a></li>
                             <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
@@ -55,7 +55,7 @@
                     <!-- Contact form-->
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">                            
-                            <h1 class="fw-bolder">자기소개서</h1>
+                            <h1 class="fw-bolder">자기소개서 작성</h1>
                             <p class="lead fw-normal text-muted mb-0">기업에서 요구하는 자기소개서 문항들입니다.</p>                          
                         </div>
                         <div class="row gx-5 justify-content-center">

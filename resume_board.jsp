@@ -52,69 +52,67 @@
                             </div>
                         </nav>
                         <!-- company 테이블 정보 가져오기-->
-                        <% Connection conn=null; 
+                        <% 
+                        Object obj_idok = session.getAttribute("idok");
+                        String id = (String)obj_idok;
+                        Connection conn=null; 
                         PreparedStatement pstmt=null; 
                         Class.forName("com.mysql.jdbc.Driver");
                         String url="jdbc:mysql://43.200.111.30:3306/db" ;
                         conn=DriverManager.getConnection(url,"root","It1"); 
-                        pstmt=conn.prepareStatement("select * from company"); 
+                        pstmt=conn.prepareStatement("select * from resume where id = (?)");
+                        
+                        pstmt.setString(1, id);
+
                         ResultSet rs=pstmt.executeQuery(); %>
 
-                        <!--채용공고 글자-->
+                        <!--자소서 소개-->
                             <section class="bg-light py-5">
                                 <div class="container px-5 my-5">
                                     <div class="text-center mb-5">
-                                        <h1 class="fw-bolder">채용 공고</h1>
-                                        <h2 class="lead fw-normal text-muted mb-0">지금 채용중인 기업을 확인하세요</h2>
+                                        <h1 class="fw-bolder">자기 소개서</h1>
+                                        <h2 class="lead fw-normal text-muted mb-0">작성중인 자기소개서를 확인하세요</h2>
                                     </div>
                                     <div class="row gx-5 justify-content-lg-start">
 
                                         <!-- 데이터베이스에 있는 정보 갯수만큼 카드형 만들기-->
                                         <% while(rs.next()){ %>
-                                            <div class="col-lg-6 col-xl-4">
+                                                                               
+                                            <div class="col-lg-6 col-xl-11">
                                                 <div class="card mb-5 mb-xl-0">
                                                     <div class="card-body p-5">
                                                         <div class="mb-3">
                                                             <span style="font-size : 20pt">
                                                             <span class="fw-bold">
-                                                                <%=rs.getString("company_subject")%>
+                                                                <%=rs.getString("company_name")%><br></br>
                                                             </span>
                                                         </span>
 
+                                                        <li class="mb-2">
+                                                            <span class="fw-bold">
+                                                            <i class="text-primary"></i>
+                                                            1번 문항<br></br></span>
+                                                            <i><%=rs.getString("company_a1")%><br></br></i>
+                                                        </li>
+
+                                                        <li class="mb-2">
+                                                            <span class="fw-bold">
+                                                                <i class="text-primary"></i>
+                                                                2번 문항<br></br></span>
+                                                                <i><%=rs.getString("company_a2")%><br></br></i>
+                                                        </li>
+
+                                                        <li class="mb-2">
+                                                            <span class="fw-bold">
+                                                                <i class="text-primary"></i>
+                                                                3번 문항<br></br></span>
+                                                                <i><%=rs.getString("company_a3")%><br></br></i>
+                                                        </li>
+
                                                         </div>
-                                                        <ul class="list-unstyled mb-4">
-                                                            <li class="mb-2">
-                                                                <i class="bi bi-check text-primary"></i>
-                                                                <strong>
-                                                                    <%=rs.getString("company_name")%>
-                                                                </strong>
-                                                            </li>
-                                                            <li class="mb-2">
-                                                                <i class="bi bi-check text-primary"></i>
-                                                                <%=rs.getString("company_career")%>
-                                                            </li>
-                                                            <li class="mb-2">
-                                                                <i class="bi bi-check text-primary"></i>
-                                                                <%=rs.getString("company_education")%>
-                                                            </li>
-                                                            <li class="mb-2">
-                                                                <i class="bi bi-check text-primary"></i>
-                                                                <%=rs.getString("company_location")%>
-                                                            </li>
-                                                            <li class="mb-2">
-                                                                <i class="bi bi-check text-primary"></i>
-                                                                <%=rs.getString("company_fulltime")%>
-                                                            </li>
-                                                        </ul>
-                                                        <!-- 이게 ㄹㅇ 개씹새끼 -->
-                                                        <%                                                            
-                                                            int num = rs.getInt("company_num");
-                                                             %>
-                                                        <div class="d-grid"><a class="btn btn-outline-primary"
-                                                            id="${numok}" onclick="location.href='company_next.jsp?num=<%=num%>'">
-                                                            채용공고 확인하기</a></div>                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                       
                                                     </div>
-                                                </div>
+                                                </div><br></br>
                                             </div>
                                             <% } %>
                                     </div>

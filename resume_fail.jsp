@@ -48,11 +48,11 @@
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <div class="text-center mb-5">
                             
-                            <h1 class="fw-bolder">공고 등록이 완료되었습니다.</h1>
+                            <h1 class="fw-bolder">저장에 실패하였습니다.</h1>
                             
                             <p></p>
-                            <a class="text-decoration-none" href="company.jsp">
-                                채용 공고 확인하기
+                            <a class="text-decoration-none" href="index.jsp">
+                                메인화면으로 돌아가기
                                  <i class="bi bi-arrow-right"></i>
                              </a>
                         </div>

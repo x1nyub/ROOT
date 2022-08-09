@@ -1,3 +1,5 @@
+<%@ page import = "java.sql.*" %>
+<%@ page import="java.io.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <% String idok=(String) session.getAttribute("idok"); 
     if (idok==null) {
@@ -6,8 +8,11 @@
 
 <%
 request.setCharacterEncoding("UTF-8");
-String id = session.getAttribute("idok");
-String company_name = session.getAttribute("cpnameok");
+Object obj_idok = session.getAttribute("idok");
+Object obj_cpnameok = session.getAttribute("cpnameok");
+
+String id = (String)obj_idok;
+String company_name = (String)obj_cpnameok;
 String company_a1 = request.getParameter("company_a1");
 String company_a2 = request.getParameter("company_a2");
 String company_a3 = request.getParameter("company_a3");
@@ -31,7 +36,7 @@ try{
     int result = pstmt.executeUpdate();
     if(result == 1){
                     
-                     response.sendRedirect("enroll_success.jsp");
+                     response.sendRedirect("resume_success.jsp");
                             }
                             }
     
