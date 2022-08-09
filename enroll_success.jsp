@@ -27,7 +27,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="index.jsp">메인 페이지</a></li>
                             <li class="nav-item"><a class="nav-link" href="company.jsp">채용 공고</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume_board.jsp">자기소개서</a></li>
+                            <%if (session.getAttribute("adminok").equals("0"))%><li class="nav-item"><a class="nav-link" href="resume_board.jsp">자기소개서</a></li>
                             <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
