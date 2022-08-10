@@ -2,7 +2,7 @@
 <%@ page import="java.io.*"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-   
+<%String adminok = (String) session.getAttribute("adminok");%> 
 <%String idok = (String) session.getAttribute("idok");%>
 <%
 

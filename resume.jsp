@@ -6,6 +6,7 @@
 <%String cpq1ok = (String) session.getAttribute("cpq1ok");%>
 <%String cpq2ok = (String) session.getAttribute("cpq2ok");%>
 <%String cpq3ok = (String) session.getAttribute("cpq3ok");%>
+<%String adminok = (String) session.getAttribute("adminok");%>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +36,7 @@
                             <li class="nav-item"><a class="nav-link" href="index.jsp">메인 페이지</a></li>
                             <li class="nav-item"><a class="nav-link" href="company.jsp">채용 공고</a></li>
                             <li class="nav-item"><a class="nav-link" href="resume_board.jsp">자기소개서</a></li>
-                            <li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
+                            <%if (adminok!=null && adminok.equals("0"))%><li class="nav-item"><a class="nav-link" href="enroll.jsp">공고 등록</a></li>                          
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SIGN</a>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
