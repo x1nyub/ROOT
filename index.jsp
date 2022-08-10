@@ -49,7 +49,7 @@
                     <div class="row gx-5 align-items-center justify-content-center">
                         <div class="col-lg-8 col-xl-7 col-xxl-6">
                             <div class="my-5 text-center text-xl-start">
-                                <a class="navbar-brand" href="https://career.kia.com/apply/applyList.kc" ><img src="assets/kia.png" style="width: 1200px;"></a>
+                                <a class="navbar-brand" href="https://career.kia.com/apply/applyList.kc" target = "_blank" ><img src="assets/kia.png" style="width: 1200px;"></a>
                             </div>
                         </div>
                         <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"></div>
