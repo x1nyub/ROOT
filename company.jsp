@@ -107,7 +107,7 @@
                                                                 <%=rs.getString("company_fulltime")%>
                                                             </li>
                                                         </ul>
-                                                        <!-- 이게 ㄹㅇ 개씹새끼 -->
+                                                        <!-- 버튼 -->
                                                         <%                                                            
                                                             int num = rs.getInt("company_num");
                                                              %>

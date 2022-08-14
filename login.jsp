@@ -54,7 +54,7 @@
                         </div>
                         <div class="row gx-5 justify-content-center">
                             <div class="col-lg-8 col-xl-6">
-                             <!--여기밑에 FORM만 건드림-->
+                             <!--로그인-->
                                 <form action="login_ok.jsp" method="post">
                                 
                                     <div class="form-floating mb-3">
