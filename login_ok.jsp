@@ -10,7 +10,7 @@
         String passwd = request.getParameter("passwd");
         String isadmin = request.getParameter("isadmin");
 
-        String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com/db";
+        String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com/db?serverTimezone=UTC";
 
         Connection conn = null;
         PreparedStatement pstmt = null;
