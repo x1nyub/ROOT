@@ -22,7 +22,7 @@ Connection conn = null;
 PreparedStatement pstmt = null;
 
 Class.forName("com.mysql.jdbc.Driver");
-String url = "jdbc:mysql://db2.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db?serverTimezone=UTC";
+String url = "jdbc:mysql://10.0.4.69:3306/db?serverTimezone=UTC";
 conn = DriverManager.getConnection(url,"root","It1234567!");
 
 pstmt = conn.prepareStatement("INSERT INTO resume (id, company_name, company_a1, company_a2, company_a3) VALUES (?, ?, ?, ?, ?)");
