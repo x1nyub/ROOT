@@ -18,7 +18,7 @@ Connection conn = null;
 PreparedStatement pstmt = null;
 
 Class.forName("com.mysql.jdbc.Driver");
-String url = "jdbc:mysql://43.200.111.30:3306/db";
+String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db";
 conn = DriverManager.getConnection(url,"root","It1");
 
 

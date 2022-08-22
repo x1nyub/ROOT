@@ -10,7 +10,7 @@
         String passwd = request.getParameter("passwd");
         String isadmin = request.getParameter("isadmin");
 
-        String url = "jdbc:mysql://43.200.111.30:3306/db";
+        String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db";
 
         Connection conn = null;
         PreparedStatement pstmt = null;
