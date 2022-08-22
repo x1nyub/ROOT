@@ -56,7 +56,7 @@
                         <% Connection conn=null; 
                         PreparedStatement pstmt=null; 
                         Class.forName("com.mysql.jdbc.Driver");
-                        String url="jdbc:mysql://10.0.4.108:3306/db" ;
+                        String url="jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db?serverTimezone=UTC" ;
                         conn=DriverManager.getConnection(url,"root","It1234567!"); 
                         pstmt=conn.prepareStatement("select * from company"); 
                         ResultSet rs=pstmt.executeQuery(); %>
