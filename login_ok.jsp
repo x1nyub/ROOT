@@ -23,7 +23,7 @@
                 Class.forName("com.mysql.jdbc.Driver");
 
 
-                conn = DriverManager.getConnection(url,"root","It1");
+                conn = DriverManager.getConnection(url,"root","It1234567!");
 
 
                 pstmt = conn.prepareStatement(sql);

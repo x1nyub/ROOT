@@ -60,7 +60,7 @@
                         PreparedStatement pstmt=null; 
                         Class.forName("com.mysql.jdbc.Driver");
                         String url="jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db" ;
-                        conn=DriverManager.getConnection(url,"root","It1"); 
+                        conn=DriverManager.getConnection(url,"root","It1234567!"); 
                         pstmt=conn.prepareStatement("select * from resume where id = (?)");
                         
                         pstmt.setString(1, id);
