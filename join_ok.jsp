@@ -18,7 +18,7 @@ Connection conn = null;
 PreparedStatement pstmt = null;
 
 Class.forName("com.mysql.jdbc.Driver");
-String url = "jdbc:mysql://10.0.4.54:3306/db?serverTimezone=UTC";
+String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db?serverTimezone=Asia/Seoul";
 conn = DriverManager.getConnection(url,"root","It1234567!");
 
 
