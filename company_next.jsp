@@ -50,7 +50,7 @@
                <%
                int num=Integer.parseInt(request.getParameter("num"));               
                      Class.forName("com.mysql.jdbc.Driver");
-                     String url = "jdbc:mysql://10.0.4.63/db?serverTimezone=UTC";
+                     String url = "jdbc:mysql://test.jobspace.monster:3306/db?serverTimezone=UTC";
                      Connection conn = DriverManager.getConnection(url, "root", "It1234567!");
                      PreparedStatement ps=(PreparedStatement)conn.prepareStatement("SELECT * from company where company_num= (?) ");
                      ps.setInt(1, num);
