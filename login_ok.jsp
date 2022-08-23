@@ -10,7 +10,7 @@
         String passwd = request.getParameter("passwd");
         String isadmin = request.getParameter("isadmin");
 
-        String url = "jdbc:mysql://test.jobspace.monster:3306/db?serverTimezone=UTC";
+        String url = "jdbc:mysql://10.0.4.54:3306/db?serverTimezone=UTC";
 
         Connection conn = null;
         PreparedStatement pstmt = null;

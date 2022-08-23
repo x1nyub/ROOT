@@ -56,7 +56,7 @@
                         <% Connection conn=null; 
                         PreparedStatement pstmt=null; 
                         Class.forName("com.mysql.jdbc.Driver");
-                        String url="jdbc:mysql://test.jobspace.monster:3306/db?serverTimezone=UTC" ;
+                        String url="jdbc:mysql://10.0.4.54:3306/db?serverTimezone=UTC" ;
                         conn=DriverManager.getConnection(url,"root","It1234567!"); 
                         pstmt=conn.prepareStatement("select * from company"); 
                         ResultSet rs=pstmt.executeQuery(); %>
