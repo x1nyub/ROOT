@@ -1,3 +1,1 @@
-# ROOT
-Jobspace Project JSP file.
-AWS Architecture Project
+AWS architecture project JSP file
