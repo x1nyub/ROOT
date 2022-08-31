@@ -18,8 +18,8 @@ Connection conn = null;
 PreparedStatement pstmt = null;
 
 Class.forName("com.mysql.jdbc.Driver");
-String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db?autoReconnect=true";
-conn = DriverManager.getConnection(url,"root","It1234567!");
+String url = "jdbc:mysql://3.36.67.133:3306/db";
+conn = DriverManager.getConnection(url,"root","It1");
 
 
 pstmt = conn.prepareStatement("INSERT INTO user (id, passwd, name, email, isadmin) VALUES (?, ?, ?, ?, ?)");

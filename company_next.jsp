@@ -50,8 +50,8 @@
                <%
                int num=Integer.parseInt(request.getParameter("num"));               
                      Class.forName("com.mysql.jdbc.Driver");
-                     String url = "jdbc:mysql://db.cvf5xzkp0bre.ap-northeast-2.rds.amazonaws.com:3306/db?autoReconnect=true";
-                     Connection conn = DriverManager.getConnection(url, "root", "It1234567!");
+                     String url = "jdbc:mysql://3.36.67.133:3306/db";
+                     Connection conn = DriverManager.getConnection(url, "root", "It1");
                      PreparedStatement ps=(PreparedStatement)conn.prepareStatement("SELECT * from company where company_num= (?) ");
                      ps.setInt(1, num);
                      ResultSet rs=ps.executeQuery();
